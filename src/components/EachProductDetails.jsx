@@ -9,7 +9,14 @@ function EachProductDetails() {
   const [details,error]=useFetch(`http://localhost:8080/api/products/${id}`);
   if(!details){
     return( <>
-              {!error?<div className='loading'>loading...</div>: <p className='error'>{error}</p>}
+              {!error?<div>
+                <div class="loader-wrapper">
+                                  <div class="loader">
+                                    <div class="bag-icon">🛍️</div>
+                                    <p class="loading-text">Loading your style...</p>
+                                  </div>
+                                </div>
+              </div>: <p className='error'>{error}</p>}
             </>)
   }
 
