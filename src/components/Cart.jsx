@@ -23,7 +23,7 @@ function Cart() {
                   <div class="loader-wrapper">
   <div class="loader">
     <div class="bag-icon">🛍️</div>
-    <p class="loading-text">Loading your style...</p>
+    <p class="loading-text">Loading...</p>
   </div>
 </div>
                   </div>: <p className='error'>{error}</p>}
