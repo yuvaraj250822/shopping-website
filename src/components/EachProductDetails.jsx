@@ -27,7 +27,7 @@ function EachProductDetails() {
       "imageUrl":image,
       "price":price
     }
-      axios.post('http://localhost:8080/api/cart/add',addData)
+      axios.post('https://shopping-website-backend-mtnr.onrender.com/api/cart/add',addData)
     console.log(id,name,price,image)
     alert('cart added successfully')
   }
