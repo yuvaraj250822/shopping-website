@@ -6,7 +6,7 @@ function Myorders() {
     const [error,setError]=useState(null);
     const [status, setStatus] = useState("ariving");
     useEffect(()=>{
-        axios.get('http://localhost:8080/api/products/order/details')
+        axios.get('https://shopping-website-backend-mtnr.onrender.com/api/products/order/details')
         .then(res=>{console.log(res.data),setOrdersData(res.data)})
         .catch(err=>{console.log(err.message),setError(err.message)})
     },[])
@@ -16,7 +16,7 @@ function Myorders() {
       }
 
       const handleOrderCancel =(id)=>{
-        axios.post(`'http://localhost:8080/api/products/order/${id}`,{"orderStatus" : "canceled"}).then(setStatus("canceled"))
+        axios.post(`'https://shopping-website-backend-mtnr.onrender.com/api/products/order/${id}`,{"orderStatus" : "canceled"}).then(setStatus("canceled"))
       }
         
 

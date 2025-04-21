@@ -35,20 +35,20 @@ function Cart() {
     
     
    const handleCartRemove = async(id)=>{
-    await axios.delete(`http://localhost:8080/api/cart/${id}`)
+    await axios.delete(`https://shopping-website-backend-mtnr.onrender.com/api/cart/${id}`)
     .then(setDel(!del)).then(alert("product removed"))
     .catch(err=>console.log("cartErr"+err))
   
 }
 
     const handleCartClear = async ()=>{
-       await axios.delete('http://localhost:8080/api/cart/clearAll')
+       await axios.delete('https://shopping-website-backend-mtnr.onrender.com/api/cart/clearAll')
        .then(setDel(!del)).catch(err =>console.log("Cartclear err"+err))
     }
 
     const handlePlaceOrder = async (cartDetails)=>{
       try{
-        axios.post('http://localhost:8080/api/products/order/place',cartDetails)
+        axios.post('https://shopping-website-backend-mtnr.onrender.com/api/products/order/place',cartDetails)
         .then(handleCartClear()).then(alert("order placed"))
       }catch{
         console.log("error for place order")
