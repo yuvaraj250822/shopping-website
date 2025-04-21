@@ -6,7 +6,7 @@ import NavBar from './NavBar';
 function Allproduct() {
     
 
- const [product,error]=useFetch('http://localhost:8080/api/products')
+ const [product,error]=useFetch('https://shopping-website-backend-mtnr.onrender.com/api/products')
         if(!product){
           return( <>
                     {!error?<div className='loading'>

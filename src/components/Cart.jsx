@@ -10,7 +10,7 @@ function Cart() {
 
    
     useEffect(()=>{
-      axios.get('http://localhost:8080/api/cart/details')
+      axios.get('https://shopping-website-backend-mtnr.onrender.com/api/cart/details')
       .then(data =>{console.log(data.data),setCartDetails(data.data), console.log(data.data.length)})
       .catch(err=>setError(err.message))
       

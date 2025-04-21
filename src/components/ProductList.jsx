@@ -4,7 +4,7 @@ import Products from './Products.jsx'
 import useFetch from './useFetch.jsx'
 
 function ProductList() {
-    const [product,error]=useFetch('http://localhost:8080/api/products')
+    const [product,error]=useFetch('https://shopping-website-backend-mtnr.onrender.com/api/products')
     if(!product){
       return( <>
                 {!error?<div >

@@ -6,7 +6,7 @@ import axios from 'axios';
 
 function EachProductDetails() {
   const {id} = useParams();
-  const [details,error]=useFetch(`http://localhost:8080/api/products/${id}`);
+  const [details,error]=useFetch(`https://shopping-website-backend-mtnr.onrender.com/api/products/${id}`);
   if(!details){
     return( <>
               {!error?<div>
